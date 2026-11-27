@@ -46,13 +46,6 @@ a {
   padding: 54px 0 60px;
 }
 
-.eyebrow {
-  margin: 0 0 14px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-}
-
 .welcome h1,
 .games h2 {
   margin: 0;
@@ -160,7 +153,7 @@ a {
   position: relative;
   overflow: hidden;
   min-height: 600px;
-  padding: 70px 0 88px;
+  padding: 70px 0 40px;
   color: #fff;
   background: var(--ink);
 }
@@ -170,10 +163,6 @@ a {
   z-index: 1;
   width: min(1120px, calc(100% - 64px));
   margin: 0 auto;
-}
-
-.eyebrow--lime {
-  color: var(--lime);
 }
 
 .games h2 {
@@ -390,6 +379,223 @@ a {
   font-size: 35px;
 }
 
+.mini-games {
+  padding: 20px 0 56px;
+  color: #fff;
+  background: var(--ink);
+}
+
+.mini-games__inner {
+  width: min(1120px, 86%);
+  margin: 0 auto;
+}
+
+.mini-games h2 {
+  margin: 0 0 22px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.mini-game-list {
+  display: grid;
+  gap: 10px;
+}
+
+.mini-game-card {
+  display: flex;
+  height: 170px;
+  min-height: 170px;
+  overflow: hidden;
+  border-radius: 12px;
+  color: var(--ink);
+  background: #fff;
+}
+
+.mini-game-card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.mini-game-card > .game-art {
+  width: 50%;
+  min-height: 0;
+  flex: 0 0 50%;
+  height: 100%;
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.mini-game-card__content {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
+}
+
+.mini-game-card h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.15;
+}
+
+.mini-game-card p {
+  margin: 8px 0 12px;
+  color: #55545c;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.mini-game-card .button {
+  min-width: 84px;
+  min-height: 23px;
+  padding: 0 14px;
+  font-size: 10px;
+}
+
+.site-footer {
+  display: grid;
+  min-height: 48px;
+  place-items: center;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 9px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.play-page {
+  min-height: 100vh;
+  background: var(--ink);
+  color: #fff;
+}
+
+.play-header,
+.playground {
+  width: min(1120px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.play-header {
+  padding: 32px 0 12px;
+}
+
+.play-header a {
+  color: var(--lime);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.play-header a:hover {
+  text-decoration: underline;
+}
+
+.play-header h1 {
+  margin: 18px 0 0;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.playground {
+  padding-bottom: 48px;
+}
+
+.play-game {
+  scroll-margin-top: 20px;
+  margin-top: 14px;
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--ink);
+  background: #fff;
+}
+
+.play-game h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.play-game > p {
+  margin: 10px 0 16px;
+  line-height: 1.5;
+}
+
+.play-form,
+.play-choices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.play-field {
+  display: grid;
+  min-width: 180px;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.play-field--wide {
+  flex: 1;
+}
+
+.play-field input {
+  min-height: 40px;
+  border: 1px solid #c9c9ce;
+  border-radius: 7px;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+.play-button {
+  min-height: 38px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 0 18px;
+  color: #fff;
+  background: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.play-button:hover:not(:disabled) {
+  color: var(--ink);
+  background: #fff;
+}
+
+.play-button:focus-visible,
+.play-field input:focus-visible {
+  outline: 3px solid #91b51d;
+  outline-offset: 2px;
+}
+
+.play-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.play-button--light {
+  color: var(--ink);
+  background: #fff;
+}
+
+.play-status {
+  min-height: 1.5em;
+  color: #4a6412;
+  font-weight: 600;
+}
+
+.play-choices {
+  align-items: center;
+}
+
+.play-choices .play-button {
+  min-height: 42px;
+}
+
 @media (max-width: 760px) {
   .welcome {
     min-height: 300px;
@@ -397,6 +603,11 @@ a {
 
   .welcome__content,
   .games__inner {
+    width: min(100% - 104px, 1120px);
+  }
+
+  .play-header,
+  .playground {
     width: min(100% - 104px, 1120px);
   }
 
@@ -455,16 +666,60 @@ a {
   .game-card h3 {
     font-size: 14px;
   }
+
+  .mini-game-card {
+    height: 170px;
+    min-height: 170px;
+  }
+
+  .mini-game-card > .game-art {
+    min-height: 0;
+  }
+
+  .mini-game-card__content {
+    padding: 12px;
+  }
+
+  .mini-game-card h3 {
+    font-size: 15px;
+  }
+
+  .mini-game-card p {
+    font-size: 9px;
+  }
+
+  .play-game {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 600px) {
+  .game-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 460px) {
   .welcome__content,
-  .games__inner {
+  .games__inner,
+  .mini-games__inner,
+  .play-header,
+  .playground {
     width: calc(100% - 36px);
   }
 
+  .welcome__lightning {
+    right: -190px;
+    opacity: 0.18;
+  }
+
+  .sparkle--one,
+  .games__sparkle {
+    display: none;
+  }
+
   .welcome h1 {
-    font-size: 31px;
+    font-size: 28px;
   }
 
   .welcome__description,
@@ -477,15 +732,13 @@ a {
     gap: 18px;
   }
 
+  .game-strip {
+    display: none;
+  }
+
   .game-art {
     height: 190px;
     font-size: 25px;
-  }
-
-  @media (min-width: 461px) and (max-width: 540px) {
-    .game-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
   }
 
   .game-art--math {
@@ -494,6 +747,55 @@ a {
 
   .game-art--words {
     font-size: 23px;
+  }
+
+  .mini-games {
+    padding: 16px 0 40px;
+  }
+
+  .mini-games h2 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+
+  .mini-game-card {
+    height: 170px;
+    min-height: 170px;
+  }
+
+  .mini-game-card > .game-art {
+    min-height: 0;
+    padding: 6px;
+  }
+
+  .mini-game-card__content {
+    padding: 10px;
+  }
+
+  .mini-game-card h3 {
+    font-size: 13px;
+  }
+
+  .mini-game-card p {
+    margin: 6px 0 9px;
+    font-size: 8px;
+  }
+
+  .play-header {
+    padding-top: 22px;
+  }
+
+  .play-game {
+    padding: 16px;
+  }
+
+  .play-game h2 {
+    font-size: 19px;
+  }
+
+  .play-field,
+  .play-form .play-button {
+    width: 100%;
   }
 }
 

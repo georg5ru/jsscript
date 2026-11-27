@@ -46,7 +46,7 @@
           </header>
 
           <div class="game-grid">
-            <a class="game-card" href="#games" aria-label="Игра №1: Угадай число">
+            <a class="game-card" href="games.html#guess-number" aria-label="Игра №1: Угадай число">
               <div class="game-art game-art--numbers" aria-hidden="true">
                 <span>6</span><span>11</span><span>48</span>
                 <span>2</span><b>?</b><span>8</span>
@@ -55,7 +55,7 @@
               <div class="game-card__body"><span class="game-card__number">Игра №1</span><h3>Угадай число</h3></div>
             </a>
 
-            <a class="game-card" href="#games" aria-label="Игра №2: Простая арифметика">
+            <a class="game-card" href="games.html#arithmetic" aria-label="Игра №2: Простая арифметика">
               <div class="game-art game-art--math" aria-hidden="true">
                 <span>100 ÷ 4 = ?</span><span>1 + 3</span><span>9 + 1 = ?</span>
                 <span>3 × 2 = ?</span><span>36 − 6 = ?</span><span>4 × 2 = ?</span>
@@ -64,7 +64,7 @@
               <div class="game-card__body"><span class="game-card__number">Игра №2</span><h3>Простая арифметика</h3></div>
             </a>
 
-            <a class="game-card" href="#games" aria-label="Игра №3: Переверни текст">
+            <a class="game-card" href="games.html#reverse-text" aria-label="Игра №3: Переверни текст">
               <div class="game-art game-art--words" aria-hidden="true">
                 <span>яшко</span><span>агудар</span><span>родимол</span>
                 <span>рыс</span><span>ьтсйиммаргорп</span><span>анидор</span>
@@ -72,21 +72,21 @@
               <div class="game-card__body"><span class="game-card__number">Игра №3</span><h3>Переверни текст</h3></div>
             </a>
 
-            <a class="game-card" href="#games" aria-label="Игра №4: Камень, ножницы, бумага">
+            <a class="game-card" href="games.html#rock-paper-scissors" aria-label="Игра №4: Камень, ножницы, бумага">
               <div class="game-art game-art--rps" aria-hidden="true">
                 <span>✊</span><span>✌</span><span>✋</span><span>?</span><b>✊</b><span>✌</span><span>✋</span><span>✊</span><span>?</span>
               </div>
               <div class="game-card__body"><span class="game-card__number">Игра №4</span><h3>Камень, ножницы, бумага</h3></div>
             </a>
 
-            <a class="game-card" href="#games" aria-label="Игра №5: Простая викторина">
+            <a class="game-card" href="games.html#quiz" aria-label="Игра №5: Простая викторина">
               <div class="game-art game-art--quiz" aria-hidden="true">
                 <span>?</span><span>?</span><span>?</span><span>?</span><b>?</b><span>?</span><span>?</span><span>?</span><span>?</span>
               </div>
               <div class="game-card__body"><span class="game-card__number">Игра №5</span><h3>Простая викторина</h3></div>
             </a>
 
-            <a class="game-card" href="#games" aria-label="Игра №6: Генератор случайных цветов">
+            <a class="game-card" href="games.html#random-colors" aria-label="Игра №6: Генератор случайных цветов">
               <div class="game-art game-art--colors" aria-hidden="true">
                 <span></span><span></span><span></span><span></span><span></span><span></span>
                 <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -98,6 +98,88 @@
         <span class="games__sparkle games__sparkle--one" aria-hidden="true">✧</span>
         <span class="games__sparkle games__sparkle--two" aria-hidden="true">✦</span>
       </section>
+
+      <section class="mini-games" id="mini-games" aria-labelledby="mini-games-title">
+        <div class="mini-games__inner">
+          <h2 id="mini-games-title">Мини-игры</h2>
+          <div class="mini-game-list">
+            <article class="mini-game-card">
+              <div class="game-art game-art--numbers" aria-hidden="true">
+                <span>6</span><span>11</span><span>48</span>
+                <span>2</span><b>?</b><span>8</span>
+                <span>4</span><span>92</span><span>10</span>
+              </div>
+              <div class="mini-game-card__content">
+                <h3>Угадай число</h3>
+                <p>Попробуй угадать случайное число от 1 до 100.</p>
+                <a class="button button--dark" href="games.html#guess-number">Играть!</a>
+              </div>
+            </article>
+
+            <article class="mini-game-card">
+              <div class="game-art game-art--math" aria-hidden="true">
+                <span>100 ÷ 4 = ?</span><span>1 + 3</span><span>9 + 1 = ?</span>
+                <span>3 × 2 = ?</span><span>36 − 6 = ?</span><span>4 × 2 = ?</span>
+                <span>3 + 5?</span><span>6 − 2</span><span>8 ÷ 2</span>
+              </div>
+              <div class="mini-game-card__content">
+                <h3>Простая арифметика</h3>
+                <p>Попробуй решить простые арифметические задачи.</p>
+                <a class="button button--dark" href="games.html#arithmetic">Играть!</a>
+              </div>
+            </article>
+
+            <article class="mini-game-card">
+              <div class="game-art game-art--words" aria-hidden="true">
+                <span>яшко</span><span>агудар</span><span>родимол</span>
+                <span>рыс</span><span>ьтсйиммаргорп</span><span>анидор</span>
+              </div>
+              <div class="mini-game-card__content">
+                <h3>Переверни текст</h3>
+                <p>Попробуй перевернуть текст, который будет перевёрнут.</p>
+                <a class="button button--dark" href="games.html#reverse-text">Играть!</a>
+              </div>
+            </article>
+
+            <article class="mini-game-card">
+              <div class="game-art game-art--rps" aria-hidden="true">
+                <span>✊</span><span>✌</span><span>✋</span><span>?</span><b>✊</b><span>✌</span><span>✋</span><span>✊</span><span>?</span>
+              </div>
+              <div class="mini-game-card__content">
+                <h3>Камень, ножницы, бумага</h3>
+                <p>Сыграй в популярную игру против компьютера.</p>
+                <a class="button button--dark" href="games.html#rock-paper-scissors">Играть!</a>
+              </div>
+            </article>
+
+            <article class="mini-game-card">
+              <div class="game-art game-art--quiz" aria-hidden="true">
+                <span>?</span><span>?</span><span>?</span><span>?</span><b>?</b><span>?</span><span>?</span><span>?</span><span>?</span>
+              </div>
+              <div class="mini-game-card__content">
+                <h3>Простая викторина</h3>
+                <p>Отвечай на вопросы викторины с вариантами ответов.</p>
+                <a class="button button--dark" href="games.html#quiz">Играть!</a>
+              </div>
+            </article>
+
+            <article class="mini-game-card">
+              <div class="game-art game-art--colors" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="mini-game-card__content">
+                <h3>Генератор случайных цветов</h3>
+                <p>Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
+                <a class="button button--dark" href="games.html#random-colors">Играть!</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="site-footer">
+      <p>Все права защищены.</p>
+    </footer>
   </body>
 </html>
