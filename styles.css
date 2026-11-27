@@ -134,10 +134,7 @@ a {
   display: flex;
   min-height: 48px;
   align-items: center;
-  justify-content: space-around;
-  gap: 24px;
   overflow: hidden;
-  padding: 0 24px;
   background: var(--lime);
   font-size: 14px;
   font-weight: 700;
@@ -145,8 +142,28 @@ a {
   white-space: nowrap;
 }
 
+.game-strip__track {
+  display: flex;
+  width: max-content;
+  animation: game-strip-scroll 24s linear infinite;
+}
+
+.game-strip__group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+}
+
 .game-strip__star {
   font-size: 21px;
+}
+
+@keyframes game-strip-scroll {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .games {
@@ -640,8 +657,17 @@ a {
   }
 
   .game-strip {
-    justify-content: flex-start;
-    gap: 20px;
+    min-height: 38px;
+    font-size: 10px;
+  }
+
+  .game-strip__group {
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .game-strip__star {
+    font-size: 15px;
   }
 
   .games {
@@ -732,8 +758,63 @@ a {
     gap: 18px;
   }
 
-  .game-strip {
+  .games {
     display: none;
+  }
+
+  .welcome__content {
+    text-align: center;
+  }
+
+  .welcome__description br {
+    display: none;
+  }
+
+  .welcome .button {
+    width: 100%;
+    min-height: 34px;
+  }
+
+  .mini-game-card,
+  .mini-game-card:nth-child(odd) {
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .mini-game-card > .game-art {
+    width: 100%;
+    height: 170px;
+    min-height: 170px;
+    flex: 0 0 170px;
+    transform: none;
+  }
+
+  .mini-game-card__content {
+    width: 100%;
+    flex: initial;
+    padding: 16px;
+  }
+
+  .mini-game-card h3 {
+    font-size: 16px;
+  }
+
+  .mini-game-card p {
+    margin: 8px 0 12px;
+    font-size: 10px;
+  }
+
+  .mini-game-card .button {
+    width: 100%;
+    min-height: 34px;
+    font-size: 11px;
+  }
+
+  .button--dark:hover {
+    transform: none;
+    color: #fff;
+    background: var(--ink);
   }
 
   .game-art {
@@ -758,29 +839,6 @@ a {
     font-size: 22px;
   }
 
-  .mini-game-card {
-    height: 170px;
-    min-height: 170px;
-  }
-
-  .mini-game-card > .game-art {
-    min-height: 0;
-    padding: 6px;
-  }
-
-  .mini-game-card__content {
-    padding: 10px;
-  }
-
-  .mini-game-card h3 {
-    font-size: 13px;
-  }
-
-  .mini-game-card p {
-    margin: 6px 0 9px;
-    font-size: 8px;
-  }
-
   .play-header {
     padding-top: 22px;
   }
@@ -800,6 +858,10 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .game-strip__track {
+    animation: none;
+  }
+
   *,
   *::before,
   *::after {

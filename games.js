@@ -27,15 +27,38 @@ if (arithmeticForm) {
   let answer;
 
   const createProblem = () => {
-    let first = Math.floor(Math.random() * 20) + 1;
-    let second = Math.floor(Math.random() * 20) + 1;
-    const operation = Math.random() < 0.5 ? "+" : "−";
+    const operations = ["+", "−", "×", "÷"];
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+    let first;
+    let second;
 
-    if (operation === "−" && second > first) {
-      [first, second] = [second, first];
+    switch (operation) {
+      case "+":
+        first = Math.floor(Math.random() * 20) + 1;
+        second = Math.floor(Math.random() * 20) + 1;
+        answer = first + second;
+        break;
+      case "−":
+        first = Math.floor(Math.random() * 20) + 1;
+        second = Math.floor(Math.random() * 20) + 1;
+
+        if (second > first) {
+          [first, second] = [second, first];
+        }
+
+        answer = first - second;
+        break;
+      case "×":
+        first = Math.floor(Math.random() * 12) + 1;
+        second = Math.floor(Math.random() * 12) + 1;
+        answer = first * second;
+        break;
+      default:
+        second = Math.floor(Math.random() * 12) + 1;
+        answer = Math.floor(Math.random() * 12) + 1;
+        first = second * answer;
     }
 
-    answer = operation === "+" ? first + second : first - second;
     problem.textContent = `${first} ${operation} ${second} = ?`;
     status.textContent = "";
     arithmeticForm.reset();
