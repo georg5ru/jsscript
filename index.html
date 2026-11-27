@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#efff8f">
+    <title>Мини-игры</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="welcome" aria-labelledby="welcome-title">
+        <div class="welcome__content">
+          <h1 id="welcome-title">Добро пожаловать<br>на мой сайт мини-игр</h1>
+          <p class="welcome__description">
+            Тебе предстоит пройти несколько увлекательных игр.<br>
+            Если готов, нажимай «Поехали!» и приступай.
+          </p>
+          <a class="button button--dark" href="#games">Поехали!</a>
+        </div>
+        <svg class="welcome__lightning" viewBox="0 0 360 330" fill="none" aria-hidden="true">
+          <path d="M170 0 254 82 157 105 273 111 209 185 306 145 330 242 281 207 289 285" />
+          <path d="M81 0 111 37 31 50 96 58 57 108" />
+        </svg>
+        <span class="sparkle sparkle--one" aria-hidden="true">✧</span>
+        <span class="sparkle sparkle--two" aria-hidden="true">✦</span>
+        <span class="sparkle sparkle--three" aria-hidden="true">✧</span>
+      </section>
+
+      <div class="game-strip" aria-label="Игры на сайте">
+        <span>ВИКТОРИНА</span><span class="game-strip__star">✦</span>
+        <span>УГАДАЙ ЧИСЛО</span><span class="game-strip__star">✦</span>
+        <span>ПЕРЕВЕРНИ ТЕКСТ</span><span class="game-strip__star">✦</span>
+        <span>ПРОСТАЯ АРИФМЕТИКА</span>
+      </div>
+
+      <section class="games" id="games" aria-labelledby="games-title">
+        <div class="games__inner">
+          <header class="games__header">
+            <h2 id="games-title">Об играх</h2>
+            <p class="games__description">
+              В моей коллекции представлены 6 игр на разные темы.<br>
+              Игры несложные — в них может поиграть каждый.<br>
+              Все игры доступны для пользования.
+            </p>
+          </header>
+
+          <div class="game-grid">
+            <a class="game-card" href="#games" aria-label="Игра №1: Угадай число">
+              <div class="game-art game-art--numbers" aria-hidden="true">
+                <span>6</span><span>11</span><span>48</span>
+                <span>2</span><b>?</b><span>8</span>
+                <span>4</span><span>92</span><span>10</span>
+              </div>
+              <div class="game-card__body"><span class="game-card__number">Игра №1</span><h3>Угадай число</h3></div>
+            </a>
+
+            <a class="game-card" href="#games" aria-label="Игра №2: Простая арифметика">
+              <div class="game-art game-art--math" aria-hidden="true">
+                <span>100 ÷ 4 = ?</span><span>1 + 3</span><span>9 + 1 = ?</span>
+                <span>3 × 2 = ?</span><span>36 − 6 = ?</span><span>4 × 2 = ?</span>
+                <span>3 + 5?</span><span>6 − 2</span><span>8 ÷ 2</span>
+              </div>
+              <div class="game-card__body"><span class="game-card__number">Игра №2</span><h3>Простая арифметика</h3></div>
+            </a>
+
+            <a class="game-card" href="#games" aria-label="Игра №3: Переверни текст">
+              <div class="game-art game-art--words" aria-hidden="true">
+                <span>яшко</span><span>агудар</span><span>родимол</span>
+                <span>рыс</span><span>ьтсйиммаргорп</span><span>анидор</span>
+              </div>
+              <div class="game-card__body"><span class="game-card__number">Игра №3</span><h3>Переверни текст</h3></div>
+            </a>
+
+            <a class="game-card" href="#games" aria-label="Игра №4: Камень, ножницы, бумага">
+              <div class="game-art game-art--rps" aria-hidden="true">
+                <span>✊</span><span>✌</span><span>✋</span><span>?</span><b>✊</b><span>✌</span><span>✋</span><span>✊</span><span>?</span>
+              </div>
+              <div class="game-card__body"><span class="game-card__number">Игра №4</span><h3>Камень, ножницы, бумага</h3></div>
+            </a>
+
+            <a class="game-card" href="#games" aria-label="Игра №5: Простая викторина">
+              <div class="game-art game-art--quiz" aria-hidden="true">
+                <span>?</span><span>?</span><span>?</span><span>?</span><b>?</b><span>?</span><span>?</span><span>?</span><span>?</span>
+              </div>
+              <div class="game-card__body"><span class="game-card__number">Игра №5</span><h3>Простая викторина</h3></div>
+            </a>
+
+            <a class="game-card" href="#games" aria-label="Игра №6: Генератор случайных цветов">
+              <div class="game-art game-art--colors" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="game-card__body"><span class="game-card__number">Игра №6</span><h3>Генератор случайных цветов</h3></div>
+            </a>
+          </div>
+        </div>
+        <span class="games__sparkle games__sparkle--one" aria-hidden="true">✧</span>
+        <span class="games__sparkle games__sparkle--two" aria-hidden="true">✦</span>
+      </section>
+    </main>
+  </body>
+</html>
