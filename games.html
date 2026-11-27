@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#202027">
+    <title>Играть — Мини-игры</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="games.js" defer></script>
+  </head>
+  <body class="play-page">
+    <header class="play-header">
+      <a href="index.html#mini-games">← На главную</a>
+      <h1>Мини-игры</h1>
+    </header>
+
+    <main class="playground">
+      <section class="play-game" id="guess-number" aria-labelledby="guess-title">
+        <h2 id="guess-title">Угадай число</h2>
+        <p>Я загадал число от 1 до 100. Попробуй его угадать!</p>
+        <form class="play-form" data-guess-form>
+          <label class="play-field">Твоё число
+            <input name="guess" type="number" min="1" max="100" required>
+          </label>
+          <button class="play-button" type="submit">Проверить</button>
+        </form>
+        <p class="play-status" data-guess-status role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="play-game" id="arithmetic" aria-labelledby="arithmetic-title">
+        <h2 id="arithmetic-title">Простая арифметика</h2>
+        <p>Реши пример: <strong data-arithmetic-problem></strong></p>
+        <form class="play-form" data-arithmetic-form>
+          <label class="play-field">Ответ
+            <input name="answer" type="number" required>
+          </label>
+          <button class="play-button" type="submit">Проверить</button>
+          <button class="play-button play-button--light" type="button" data-new-problem>Новый пример</button>
+        </form>
+        <p class="play-status" data-arithmetic-status role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="play-game" id="reverse-text" aria-labelledby="reverse-title">
+        <h2 id="reverse-title">Переверни текст</h2>
+        <p>Введи любой текст и посмотри, как он читается наоборот.</p>
+        <form class="play-form" data-reverse-form>
+          <label class="play-field play-field--wide">Текст
+            <input name="text" type="text" required>
+          </label>
+          <button class="play-button" type="submit">Перевернуть</button>
+        </form>
+        <p class="play-status" data-reverse-status role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="play-game" id="rock-paper-scissors" aria-labelledby="rps-title">
+        <h2 id="rps-title">Камень, ножницы, бумага</h2>
+        <p>Выбери ход и сыграй с компьютером.</p>
+        <div class="play-choices" data-rps-choices>
+          <button class="play-button" type="button" data-choice="rock">✊ Камень</button>
+          <button class="play-button" type="button" data-choice="scissors">✌ Ножницы</button>
+          <button class="play-button" type="button" data-choice="paper">✋ Бумага</button>
+        </div>
+        <p class="play-status" data-rps-status role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="play-game" id="quiz" aria-labelledby="quiz-title">
+        <h2 id="quiz-title">Простая викторина</h2>
+        <p data-quiz-question></p>
+        <div class="play-choices" data-quiz-options></div>
+        <p class="play-status" data-quiz-status role="status" aria-live="polite"></p>
+        <button class="play-button" type="button" data-quiz-next disabled>Дальше</button>
+      </section>
+
+      <section class="play-game" id="random-colors" aria-labelledby="colors-title">
+        <h2 id="colors-title">Генератор случайных цветов</h2>
+        <p>Нажми на кнопку, чтобы поменять цвет фона страницы.</p>
+        <button class="play-button" type="button" data-new-color>Сменить цвет</button>
+        <p class="play-status" data-color-status role="status" aria-live="polite"></p>
+      </section>
+    </main>
+  </body>
+</html>
